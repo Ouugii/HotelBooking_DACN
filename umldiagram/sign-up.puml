@@ -1,0 +1,27 @@
+@startuml
+actor User
+participant "AccessController" as AC
+participant "AccessService" as AS
+participant "User" as U
+participant "bcrypt" as B
+
+User -> AC: POST /signup
+AC -> AS: signUp(req.body)
+AS -> U: findOne(email)
+U --> AS: foundUser
+
+alt User already exists
+    AS -> AC: throw Error("Account already registered")
+    AC --> User: Error message
+else User does not exist
+    AS -> B: genSalt()
+    B --> AS: salt
+    AS -> B: hash(password, salt)
+    B --> AS: hashPassword
+    AS -> U: create({ email, hashPassword, role })
+    U --> AS: newUser
+
+    AS -> AC: return { user }
+    AC -> User: Registered OK
+end
+@enduml

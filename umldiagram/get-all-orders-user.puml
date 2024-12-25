@@ -1,0 +1,19 @@
+@startuml
+actor User
+participant "UserOrderController" as UOC
+participant "UserOrderService" as UOS
+participant "Database" as DB
+
+User -> UOC: GET /order
+UOC -> UOS: getAllOrder(req._id)
+UOS -> DB: findAll({ where: { id_user: userId } })
+DB --> UOS: foundListOrder
+
+alt Orders not found
+    UOS -> UOC: throw NotFoundError()
+    UOC --> User: Error message
+else Orders found
+    UOS -> UOC: return { foundListOrder }
+    UOC -> User: new OK({ message: "Get all order OK").send(res)
+end
+@enduml

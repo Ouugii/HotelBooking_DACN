@@ -1,0 +1,22 @@
+@startuml
+actor Client
+participant "createApplication()" as CA
+participant "app" as App
+participant "EventEmitter.prototype" as EE
+participant "proto" as Proto
+participant "req" as Req
+participant "res" as Res
+
+Client -> CA: createApplication()
+activate CA
+
+CA -> CA: create app function
+CA -> EE: mixin EventEmitter properties
+CA -> Proto: mixin proto properties
+CA -> Req: create app.request prototype
+CA -> Res: create app.response prototype
+CA -> App: call app.init()
+CA -> Client: return app
+deactivate CA
+
+@enduml

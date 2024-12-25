@@ -1,0 +1,56 @@
+@startuml
+
+class User {
+    + signUp()
+    + login()
+    + logout()
+    + searchHotels()
+    + createOrder()
+    + viewOrderList()
+    + viewOrderDetail()
+    + cancelOrder()
+    + updateOrder()
+}
+
+class HotelManager {
+    + signUp()
+    + login()
+    + logout()
+    + viewOrderList()
+    + updateOrder()
+    + checkoutOrder()
+    + addUtils()
+    + addImages()
+}
+
+class Order {
+    + create()
+    + update()
+    + cancel()
+    + checkout()
+    + viewList()
+    + viewDetail()
+}
+
+class Hotel {
+    + addUtil()
+    + addImage()
+    + search()
+}
+
+class System {
+    + manageUser()
+    + manageOrder()
+    + manageHotel()
+}
+
+User --> Order : manages
+User --> Hotel : searches
+HotelManager --> Order : manages
+HotelManager --> Hotel : manages
+System --> User : includes
+System --> HotelManager : includes
+System --> Order : includes
+System --> Hotel : includes
+
+@enduml

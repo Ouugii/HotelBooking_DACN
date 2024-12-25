@@ -1,0 +1,19 @@
+@startuml
+actor User
+participant "UserOrderController" as UOC
+participant "UserOrderService" as UOS
+participant "Database" as DB
+
+User -> UOC: GET /order/detail/{orderId}
+UOC -> UOS: getOrderDetail(req._id, req.params.orderId)
+UOS -> DB: findOne()
+DB --> UOS: foundOrder
+
+alt Order not found
+    UOS -> UOC: throw NotFoundError()
+    UOC --> User: Error message
+else Order found
+    UOS -> UOC: return { foundOrder }
+    UOC -> User: new OK({ message: "Get detail order OK", metadata).send(res)
+end
+@enduml

@@ -1,0 +1,24 @@
+.address_label {
+  font-size: medium;
+  font-weight: 500;
+}
+
+.Address_Container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.Address_sl {
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.input_show {
+  padding: 5px;
+  border: solid rgb(224, 224, 224);
+  background-color: rgb(224, 224, 224);
+  border-radius: 5px;
+}

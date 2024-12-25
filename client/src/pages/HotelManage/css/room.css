@@ -1,0 +1,65 @@
+.btn-createRoom {
+  padding: 0px 1.7rem 1.7rem 1.7rem;
+}
+
+.btn-createRoom-Content {
+  background-color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: ease-in-out 0.3s;
+  font-weight: 500;
+}
+
+.createRoom-btn {
+  background-color: #003580;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: ease-in-out 0.3s;
+  font-weight: 500;
+  width: 20%;
+}
+
+.createRoom-btn:hover {
+  background-color: white;
+  color: black;
+  transition: ease-in-out 0.3s;
+}
+
+.btn-createRoom-Content:hover {
+  background-color: #003580;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+.CreateRoom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.301);
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.CreateRoom-Content {
+  width: 60%;
+  background-color: rgb(243, 243, 243);
+  color: black;
+  padding: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 80%;
+  overflow-y: scroll;
+}
+
+.CreateRoom-Ct {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

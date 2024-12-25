@@ -1,0 +1,43 @@
+.slogan{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+.slItem{
+    width: 400px;
+    min-width: 300;
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+   
+}
+
+.slImg{
+    margin: 30px;
+ width: 76px;
+ height: auto;
+}
+
+.slCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   gap: 5px;
+   padding: 10px;
+}
+
+.slName{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.slDesc{
+    font-weight: 400;
+    font-size: 13px;
+}

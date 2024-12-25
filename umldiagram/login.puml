@@ -1,0 +1,23 @@
+@startuml
+actor User
+participant "AccessController" as AC
+participant "AccessService" as AS
+participant "User Model" as U
+participant "bcrypt" as B
+participant "KeyService" as KS
+participant "OK" as OK
+
+User -> AC: POST /login
+AC -> AS: login(req.body)
+AS -> U: findUser(option)
+U --> AS: foundUser
+AS -> B: compare(password, foundUser.password)
+B --> AS: validPassword
+AS -> KS: createTokenPair(foundUser)
+KS --> AS: tokenPair
+AS -> KS: storeRefreshToken(foundUser._id, tokenPair.refreshToken)
+AS -> AC: { user, accessToken, refreshToken }
+AC -> res: setCookie(accessToken, refreshToken)
+AC -> OK: new OK("Login OK", { user, accessToken }).send(res)
+OK --> User: Login OK
+@enduml

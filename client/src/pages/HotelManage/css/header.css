@@ -1,0 +1,38 @@
+.HeaderNav {
+  height: 9%;
+  display: flex !important;
+  justify-content: center !important;
+  background-color: white;
+}
+
+.navContainerHeader {
+  width: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.logoHeader {
+  font-weight: 500;
+  font-size: 30px;
+  justify-content: left;
+  letter-spacing: 2px;
+  padding-top: 8px;
+}
+.btnHeader {
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 5px 9px;
+  cursor: pointer;
+  color: #003580;
+  box-sizing: border-box;
+  transition: ease-out 0.2s;
+}
+
+.btnHeader:hover {
+  background-color: #003580;
+  color: white;
+  transition: ease-in 0.2s;
+}

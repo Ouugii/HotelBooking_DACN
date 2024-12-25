@@ -1,0 +1,46 @@
+.hotel-rule {
+  width: 100%;
+  max-width: 1024px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border-top: rgb(206, 206, 206) solid 0.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rule-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  border: black solid 0.3px;
+  padding: 20px 20px 0px 20px;
+}
+
+.rule-content {
+  display: flex;
+  border-bottom: rgb(228, 228, 228) solid 0.3px;
+  padding-bottom: 20px;
+}
+
+.rule-content-title {
+  max-width: 30%;
+  width: 30%;
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.rule-content-Content {
+  width: 70%;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: start;
+  font-size: 14px;
+  flex-direction: column;
+}

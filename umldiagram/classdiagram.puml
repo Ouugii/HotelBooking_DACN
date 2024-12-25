@@ -1,0 +1,86 @@
+@startuml
+class User {
+  +Integer id
+  +String email
+  +String password
+  +String role
+  +String fullname
+  +String phone
+  +String address
+  +String house_street
+
+  +createOrder()
+  +updateOrder()
+  +cancelOrder()
+}
+
+class Rating {
+  +Integer id
+  +Integer user_id
+  +Integer hotel_id
+  +Integer rating
+  +String comment
+  +Date rating_date
+}
+
+class Hotel {
+  +Integer id
+  +String name
+  +String address
+  +String phone
+  +String email
+}
+
+class Room {
+  +Integer id
+  +Integer hotel_id
+  +String room_type
+  +Boolean is_rented
+  +Decimal price
+}
+
+class Order {
+  +Integer id
+  +Integer user_id
+  +Integer room_id
+  +Integer hotel_id
+  +Date start_day
+  +Date end_day
+  +Decimal total_price
+  +String status
+}
+
+class Utility {
+  +Integer id
+  +String name
+  +Decimal price
+}
+
+class Province {
+  +String code
+  +String name
+  +Integer admin_region_id
+}
+
+class District {
+  +String code
+  +String name
+  +String province_code
+}
+
+class Ward {
+  +String code
+  +String name
+  +String district_code
+}
+
+User "1" -- "*" Order : makes
+Hotel "1" -- "*" Room : has
+Hotel "1" -- "*" Rating : receives
+User "1" -- "*" Rating : gives
+Order "1" -- "*" Room : includes
+Hotel "1" -- "*" Utility : offers
+AdministrativeRegion "1" -- "*" Province : contains
+Province "1" -- "*" District : contains
+District "1" -- "*" Ward : contains
+@enduml

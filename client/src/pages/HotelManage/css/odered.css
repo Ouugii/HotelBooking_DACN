@@ -1,0 +1,60 @@
+.ordered_opt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.301);
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.Create-Ord {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.ordered-detail-L {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 40%;
+}
+
+.ordered-detail-R {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 60%;
+}
+
+.ordered-detail {
+  width: 800px;
+}
+
+.addRoom-ord-content {
+  display: flex;
+  gap: 10px;
+
+  align-items: center;
+}
+
+.Create-Ord2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.room-box {
+  max-height: 600px;
+  overflow-y: scroll;
+}

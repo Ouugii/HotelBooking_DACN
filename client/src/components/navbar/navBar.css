@@ -1,0 +1,84 @@
+.navbar {
+  height: 70px;
+  background-color: #003580;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-weight: 500;
+  font-size: 25px;
+}
+.navItems {
+  box-sizing: border-box;
+}
+.navButton {
+  border-radius: 2px;
+  font-weight: 500;
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #003580;
+  box-sizing: border-box;
+  transition: ease-out 0.2s;
+  background-color: white;
+}
+.navButton:hover {
+  background-color: #003580;
+  color: white;
+  border: 0.1px solid;
+
+  transition: ease-in 0.2s;
+}
+
+.navButton2 {
+  border-radius: 2px;
+  font-weight: 500;
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #003580;
+  box-sizing: border-box;
+  transition: ease-out 0.2s;
+  background-color: white;
+}
+
+.navButton2:hover {
+  background-color: #003580;
+  color: white;
+  border: 0.1px solid;
+
+  transition: ease-in 0.2s;
+}
+
+.navButton1 {
+  border-radius: 2px;
+  font-weight: 500;
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #003580;
+  color: white;
+  transition: ease-out 0.2s;
+}
+
+.navButton1:hover {
+  background-color: white;
+  color: #003580;
+  border: 0.1px solid;
+
+  transition: ease-in 0.2s;
+}

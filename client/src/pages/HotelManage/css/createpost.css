@@ -1,0 +1,17 @@
+.CreatePost-Header {
+  font-size: 40px;
+  font-weight: 300;
+  padding-bottom: 4px;
+  margin-bottom: 40px;
+  border-bottom: 0.1px rgb(194, 194, 194) solid;
+}
+
+.CreatePost-Container {
+  padding: 30px;
+}
+
+.CreatePost-Content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

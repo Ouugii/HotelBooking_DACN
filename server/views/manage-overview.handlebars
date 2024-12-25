@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .table-container {
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+  {{> admin-navbar}}
+
+
+  <div class="container pt-3">
+    <h1>{{metadata.model}}</h1>
+
+    <p>
+      <a href="#">Create New</a>
+    </p>
+
+    <div class="table-container">
+      {{> table}}
+    </div>
+
+  </div>
+</body>
+
+</html>

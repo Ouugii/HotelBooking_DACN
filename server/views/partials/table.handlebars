@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        {{#each metadata.cols}}
+        <th>{{this}}</th>
+        {{/each}}
+        <th>ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tbody>
+      {{#each info}}
+      <tr>
+        {{#each this}}
+        <td>{{this}}</td>
+        {{/each}}
+        <td>
+          <a href="#">Edit</a> |
+          <a href="#">Details</a> |
+          <a href="#">Delete</a>
+        </td>
+      </tr>
+      {{/each}}
+
+      {{!-- {{#each metadata.database_cols}}
+      <tr>
+        {{#each ../../info}}
+        <td>{{lookup ../this}}</td>
+        {{/each}}
+        <td>
+          <a href="#">Edit</a> |
+          <a href="#">Details</a> |
+          <a href="#">Delete</a>
+        </td>
+      </tr>
+      {{/each}} --}}
+
+
+    </tbody>
+  </table>
+</body>
+
+</html>

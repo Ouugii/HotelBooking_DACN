@@ -1,0 +1,22 @@
+@startuml
+actor User
+participant "AccessController" as AC
+participant "AccessService" as AS
+participant "KeyService" as KS
+
+User -> AC: DELETE /logout
+AC -> verifyToken: Verify token
+verifyToken -> jwt: verify(token)
+jwt --> verifyToken: decoded token
+verifyToken -> AC: token valid
+
+AC -> AS: logout(req.user)
+AS -> KS: deleteKeyByIdUser(req.user._id)
+KS --> AS: result
+AS --> AC: result
+
+AC -> res: clearCookie("refreshToken")
+AC -> res: clearCookie("accessToken")
+AC -> res: send({ message: "Logout OK", metadata })
+res --> User: Logout OK
+@enduml

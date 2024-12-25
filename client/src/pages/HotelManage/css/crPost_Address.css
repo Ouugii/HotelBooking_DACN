@@ -1,0 +1,15 @@
+.Address_title {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.Address_Content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.Address_sl {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

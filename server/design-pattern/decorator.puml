@@ -1,0 +1,32 @@
+@startuml
+actor Client
+participant "app" as App
+participant "expressInit" as EI
+participant "req" as Req
+participant "res" as Res
+participant "next" as Next
+
+Client -> App: app.use(expressInit)
+activate App
+
+App -> EI: expressInit(req, res, next)
+activate EI
+
+EI -> EI: if (app.enabled('x-powered-by'))
+alt x-powered-by enabled
+    EI -> Res: setHeader('X-Powered-By', 'Express')
+end
+
+EI -> Req: req.res = res
+EI -> Res: res.req = req
+EI -> Req: req.next = next
+
+EI -> Req: req.__proto__ = app.request
+EI -> Res: res.__proto__ = app.response
+
+EI -> Res: res.locals = res.locals || Object.create(null)
+
+EI -> Next: next()
+deactivate EI
+
+@enduml

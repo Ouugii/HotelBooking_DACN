@@ -1,0 +1,30 @@
+.wrapper-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.a-contentL,
+.a-contentR {
+  font-size: 15px;
+  font-weight: 600;
+  transition: ease-in-out 0.3s;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.a-contentL:hover {
+  letter-spacing: 1px;
+  transition: ease-in-out 0.3s;
+  background-color: #0d6efd;
+  color: white;
+}
+
+.a-contentR:hover {
+  letter-spacing: 1px;
+  transition: ease-in-out 0.3s;
+  background-color: #0d6efd;
+  color: white;
+}

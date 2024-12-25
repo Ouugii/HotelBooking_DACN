@@ -1,0 +1,19 @@
+@startuml
+actor User
+participant "UserOrderController" as UOC
+participant "UserOrderService" as UOS
+participant "Database" as DB
+
+User -> UOC: POST /make-order
+UOC -> UOS: makeOrder(req._id, req.body)
+UOS -> DB: create()
+DB --> UOS: makedOrder
+
+alt Order not created
+    UOS -> UOC: throw NotFoundError("Error: Can make order")
+    UOC --> User: Error message
+else Order created
+    UOS -> UOC: return { order: makedOrder }
+    UOC -> User: new OK({ message: "Make order OK", metadata: { order } }).send(res)
+end
+@enduml

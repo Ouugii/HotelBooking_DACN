@@ -1,0 +1,23 @@
+@startuml
+actor Client
+participant "app" as App
+participant "bodyParser.json" as JSONParser
+participant "bodyParser.urlencoded" as URLEncodedParser
+participant "Router" as Router
+
+Client -> App: app.use(JSONParser)
+activate App
+App -> JSONParser: register middleware
+deactivate App
+
+Client -> App: app.use(URLEncodedParser)
+activate App
+App -> URLEncodedParser: register middleware
+deactivate App
+
+Client -> App: app.use(Router)
+activate App
+App -> Router: register router
+deactivate App
+
+@enduml
